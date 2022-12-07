@@ -11,7 +11,7 @@ Imports System.Web.UI.HtmlControls
 Imports System.Web.UI.WebControls
 Imports System.Web.UI.WebControls.WebParts
 Imports System.Xml.Linq
-Imports DevExpress.Web.ASPxEditors
+Imports DevExpress.Web
 
 Namespace SetEditTemplateValueInCode
 	Partial Public Class _Default
@@ -42,7 +42,7 @@ Namespace SetEditTemplateValueInCode
 			Return table
 		End Function
 
-		Protected Sub ASPxGridView1_HtmlEditFormCreated(ByVal sender As Object, ByVal e As DevExpress.Web.ASPxGridView.ASPxGridViewEditFormEventArgs)
+		Protected Sub ASPxGridView1_HtmlEditFormCreated(ByVal sender As Object, ByVal e As DevExpress.Web.ASPxGridViewEditFormEventArgs)
 			Dim editor As ASPxTextEdit = CType(ASPxGridView1.FindEditFormTemplateControl("ASPxTextBox1"), ASPxTextEdit)
 			' EditForm is open for editing
 			If Request.Params(editor.UniqueID) Is Nothing Then

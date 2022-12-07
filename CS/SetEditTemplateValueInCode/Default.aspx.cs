@@ -10,7 +10,7 @@ using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Xml.Linq;
-using DevExpress.Web.ASPxEditors;
+using DevExpress.Web;
 
 namespace SetEditTemplateValueInCode {
     public partial class _Default : System.Web.UI.Page {
@@ -39,7 +39,7 @@ namespace SetEditTemplateValueInCode {
             return table;
         }
 
-        protected void ASPxGridView1_HtmlEditFormCreated(object sender, DevExpress.Web.ASPxGridView.ASPxGridViewEditFormEventArgs e) {
+        protected void ASPxGridView1_HtmlEditFormCreated(object sender, DevExpress.Web.ASPxGridViewEditFormEventArgs e) {
             ASPxTextEdit editor = (ASPxTextEdit)ASPxGridView1.FindEditFormTemplateControl("ASPxTextBox1");
             // EditForm is open for editing
             if(Request.Params[editor.UniqueID] == null) {
